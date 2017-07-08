@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+     <title> Roar! </title>
+    
+    <meta name="description" content="Roar! by The Columbia Lion">
+    <meta name="keywords" content="columbia, university, the lion">
+    <meta name="author" content="The Columbia Lion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+   <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dropzone/5.1.1/dropzone.js"> </script>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+
+
+</head>
+<body>
+  <div class="containerbox"> Roar! </div>
+   
+     <div class="container">
+     
+     Only two steps away from your new wallpaper!
+      <form action="upload" method="post" enctype="multipart/form-data">
+          
+        <input type="file" name="file"><br /> 1. Click here to upload your photo. <br />
+        <input type="submit" value="Upload"> <font color="black">2. Click here to download your wallpaper.</font>
+      </form>
+   
+    </div>
+
+
+    
+    
+<ul class="nav">
+  <li class="navItem"><a href="{{ url_for('index') }}">Home</a></li>
+  <li class="navItem"><a href="http://www.m.me/thecolumbialion">LionBot</a></li>
+  <li class="navItem"><a href="http://columbialion.com/submit/">Join The Lion</a></li>
+  <li class="navItem"><a href="http://www.facebook.com/thecolumbialion">Facebook</a></li>
+  <li class="navItem"><a href="http://www.instagram.com/thecolumbialion">Instagram</a></li>
+  <li class="navItem"><a href="mailto:submissions@columbialion.com?subject=Hello!">Contact</a></li>
+</ul>
+    
+    
+
+	<script>
+        $.backstretch([
+          "{{url_for('static', filename='images/IMG_2175.png')}}",
+          "{{url_for('static', filename='images/IMG_6999.png')}}",
+          "{{url_for('static', filename='images/IMG_6427.png')}}"
+
+        ], {
+            duration: 3000,
+            transition: 'push_left|push_right|cover_up|cover_down|fade',
+            transitionDuration: 450
+        });
+    </script>
+    
+</body>
+</html>

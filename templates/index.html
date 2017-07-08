@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+     <title> Roar! </title>
+    <meta name="description" content="Roar! by The Columbia Lion">
+    <meta name="keywords" content="columbia, university, the lion">
+    <meta name="author" content="The Columbia Lion">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" type="text/css" href="../static/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
+</head>
+<body>
+    <div class="containerbox">Roar!</div>
+    <div class="container">
+         <h1>About Roar!</h1>
+        <p>Roar is a product by The Lion meant to help you celebrate your Columbia spirit.</p>
+        <p>Click <a href="{{ url_for('upload') }}"> here</a> to begin! </p>
+        <!--<form> <button id="button" formaction="{{ url_for('upload') }}"> Get Started</button> </form>-->
+    </div>
+   
+<ul class="nav">
+  <li class="navItem"><a href="{{ url_for('index') }}">Home</a></li>
+  <li class="navItem"><a href="http://www.m.me/thecolumbialion">LionBot</a></li>
+  <li class="navItem"><a href="http://columbialion.com/submit/">Join The Lion</a></li>
+  <li class="navItem"><a href="http://www.facebook.com/thecolumbialion">Facebook</a></li>
+  <li class="navItem"><a href="http://www.instagram.com/thecolumbialion">Instagram</a></li>
+  <li class="navItem"><a href="mailto:submissions@columbialion.com?subject=Hello!">Contact</a></li>
+</ul>
+
+	<script>
+        $.backstretch([
+          "{{url_for('static', filename='images/IMG_2168.jpg')}}",
+          "{{url_for('static', filename='images/IMG_2170.jpg')}}",
+          "{{url_for('static', filename='images/IMG_2163.jpg')}}",
+          "{{url_for('static', filename='images/IMG_2164.jpg')}}",
+          "{{url_for('static', filename='images/IMG_2174.jpg')}}",
+
+
+        ], {
+            duration: 4000,
+            transition: 'push_left|push_right|cover_up|cover_down|fade',
+            transitionDuration: 450
+        });
+    </script>
+</body>
+</html>
