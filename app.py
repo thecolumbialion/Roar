@@ -77,6 +77,10 @@ def uploaded_file(filename):
 		return send_from_directory('images/', 'IMG_2174.jpg', as_attachment=True)
 	#return render_template('imagePage.html', filename = "/images/wallpapers/" + filename[1:] )
 
+@app.route("/wakemydyno.txt")
+def keep_app_awake():
+    return send_file(
+        "static/wakemydyno.txt"), 200
 
 @app.errorhandler(404)
 def page_not_found(error):
