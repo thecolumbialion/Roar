@@ -73,10 +73,10 @@ def uploaded_file(filename):
     except:
         return send_from_directory('images/', 'IMG_2174.jpg', as_attachment=True)
 
-@app.route("/wakemydyno.txt")
+"""@app.route("/wakemydyno.txt")
 def keep_app_awake():
     return send_file(
-        "static/wakemydyno.txt"), 200
+        "static/wakemydyno.txt"), 200"""
 
 @app.errorhandler(404)
 def page_not_found(error):
